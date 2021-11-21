@@ -1,0 +1,101 @@
+:root {
+  --header-bg-color: #161B22;
+  --main-bg-color: #0D1117;
+  --btn-color: #238636;
+  --btn-color-hover: #349747;
+  --nav-font-color: #D8CCC0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header {
+  width: 100%;
+  max-width: 100%;
+  padding: 0 5rem;
+  height: 12rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: var(--header-bg-color);
+}
+
+header a > .logo-img {
+  height: auto;
+  width: 13rem;
+}
+
+header .nav-list {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 60rem;
+  height: 15rem;
+  font-size: 2rem;
+}
+
+header .nav-item {
+  color: var(--nav-font-color);
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+}
+
+header .nav-item:hover {
+  color: #fff;
+}
+
+header .nav-item.nav-btn {
+  display: block;
+  width: 18rem;
+  height: 5rem;
+  line-height: 5rem;
+  text-align: center;
+  border-radius: 2rem;
+  background-color: var(--btn-color);
+  color: #fff;
+  cursor: pointer;
+}
+
+header .nav-item.nav-btn:hover {
+  background-color: var(--btn-color-hover);
+}
+
+header .hamburger-btn {
+  display: none;
+}
+/*# sourceMappingURL=main.css.map */
