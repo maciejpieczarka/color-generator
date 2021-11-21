@@ -39,6 +39,9 @@ ul, ol {
 }
 
 header {
+  position: fixed;
+  left: 0;
+  top: 0;
   width: 100%;
   max-width: 100%;
   padding: 0 5rem;
@@ -97,5 +100,83 @@ header .nav-item.nav-btn:hover {
 
 header .hamburger-btn {
   display: none;
+}
+
+.home {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  height: 100vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: var(--main-bg-color);
+}
+
+.cards-container {
+  width: 150rem;
+  height: 50rem;
+  background-color: #fff;
+  border-radius: 1500rem 750rem 1500rem 750rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 1px solid green;
+}
+
+.cards-container .card {
+  width: 25rem;
+  height: 35rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 0px 30px 0px #00000080;
+          box-shadow: 0px 0px 30px 0px #00000080;
+  margin: 0 3rem;
+}
+
+.cards-container .card:last-child {
+  margin-right: 16rem;
+}
+
+.cards-container .card:first-child {
+  margin-left: 16rem;
+}
+
+.cards-container .card .card-color {
+  background-color: black;
+  width: 23rem;
+  height: 85%;
+  border-radius: 1rem;
+}
+
+.cards-container .card .hex {
+  margin: 1rem 0;
+  height: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cards-container .card .hex > span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
 }
 /*# sourceMappingURL=main.css.map */
