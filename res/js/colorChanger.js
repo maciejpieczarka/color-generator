@@ -81,6 +81,6 @@ cards.forEach(card => {
         setTimeout(() => {
             alertBox.classList.remove('active');
             alertBox.classList.add('hide');
-        }, 5000);
+        }, 2000);
     });
 });
