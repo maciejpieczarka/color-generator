@@ -13,8 +13,11 @@ const getElement = (name, type) => {
 const generateHex = () => {
     const hexSymbols = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F'];
     let code = '#';
+
+    //Array responsible for the storage of 4 random colors
     let hexesArray = [];
-    let hexArea = '';
+
+    //generating 4 random hexes and adding them to the array
     for(i = 0; i < 4; i++) {
         for(j = 0; j < 6; j++) {
             code += hexSymbols[Math.floor(Math.random() * hexSymbols.length)];
@@ -22,6 +25,8 @@ const generateHex = () => {
         hexesArray.push(code);
         code = '#';
     }
+
+    //applying colors and hex values to the cards
     for(i = 0; i < colorAreas.length; i++) {
         colorAreas[i].style.backgroundColor = hexesArray[i];
         hexAreas[i].textContent = hexesArray[i];
@@ -30,7 +35,8 @@ const generateHex = () => {
 
 //Copying color functionality
 const copy = (value) => {
-    //! TODO
+    //! using Clipboard API to copy the HEX value
+    navigator.clipboard.writeText(value);
 };
 
 // variables
@@ -40,6 +46,7 @@ const thirdCard = getElement('third-card', 'id');
 const fourthCard = getElement('fourth-card', 'id');
 const cards = getElement('card', 'classes');
 const generateBtn = getElement('generateBtn', 'id');
+const alertBox = getElement('alert-box', 'id');
 
 // Array used for holding card color areas
 const colorAreas = [firstCard, secondCard, thirdCard, fourthCard];
@@ -51,7 +58,7 @@ window.addEventListener('load', () => {
 });
 
 //Spacebar color generation
-document.addEventListener('keydown', (e) => {
+document.addEventListener('keyup', (e) => {
     if(e.key == ' ' || e.code == 'Space') {
         generateHex();
     } else {
@@ -66,10 +73,14 @@ generateBtn.addEventListener('click', () => {
 
 //copy on click
 cards.forEach(card => {
-    card.addEventListener('click', () => {
+    card.addEventListener('click', (e) => {
+        alertBox.classList.remove('hide');
+        alertBox.classList.add('active');
         let hexToCopy = card.querySelector('.hex span').textContent;
-        console.log(hexToCopy);
-        // copy(hexToCopy)
-        
+        copy(hexToCopy);
+        setTimeout(() => {
+            alertBox.classList.remove('active');
+            alertBox.classList.add('hide');
+        }, 5000);
     });
 });
