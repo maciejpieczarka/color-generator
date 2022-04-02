@@ -5,15 +5,14 @@ header {
     top: 0;
     width: 100%;
     max-width: 100%;
-    padding: 0 5rem;
-    height: 10rem;
+    padding: 4rem 5rem;
+    height: 7rem;
     align-items: center;
     justify-content: space-between;
-    background-color: var(--header-bg-color);
 
     a > .logo-img {
         height: auto;
-        width: 12rem;
+        width: 9rem;
     }
 
     .nav-list {
@@ -46,6 +45,11 @@ header {
             &:hover {
                 background-color: var(--btn-color-hover);
             }
+        }
+
+        &.active {
+            font-weight: bold;
+            border-bottom: 2px solid var(--nav-font-color);
         }
     }
 

@@ -10,7 +10,7 @@ footer {
     justify-content: space-between;
 
     .social-medias {
-        font-size: 3.5rem;
+        font-size: 3rem;
     
         > a > i {
             margin: 0 1rem;
@@ -24,6 +24,7 @@ footer {
     }
 
     .credentials p{
-        font-size: 2rem;
+        font-size: 1.6rem;
+        color: var(--nav-font-color);
     }
 }

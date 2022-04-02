@@ -45,20 +45,19 @@ header {
   top: 0;
   width: 100%;
   max-width: 100%;
-  padding: 0 5rem;
-  height: 10rem;
+  padding: 4rem 5rem;
+  height: 7rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: var(--header-bg-color);
 }
 
 header a > .logo-img {
   height: auto;
-  width: 12rem;
+  width: 9rem;
 }
 
 header .nav-list {
@@ -99,6 +98,11 @@ header .nav-item.nav-btn:hover {
   background-color: var(--btn-color-hover);
 }
 
+header .nav-item.active {
+  font-weight: bold;
+  border-bottom: 2px solid var(--nav-font-color);
+}
+
 header .hamburger-btn {
   display: none;
 }
@@ -122,8 +126,8 @@ header .hamburger-btn {
 }
 
 .cards-container {
-  width: 150rem;
-  height: 50rem;
+  width: 130rem;
+  height: 40rem;
   background-color: #fff;
   border-radius: 1500rem 750rem 1500rem 750rem;
   -webkit-box-align: center;
@@ -136,8 +140,8 @@ header .hamburger-btn {
 }
 
 .cards-container .card {
-  width: 25rem;
-  height: 35rem;
+  width: 20rem;
+  height: 30rem;
   background-color: #fff;
   border-radius: 1rem;
   padding: 1rem;
@@ -164,7 +168,7 @@ header .hamburger-btn {
 
 .cards-container .card .card-color {
   background-color: #000;
-  width: 23rem;
+  width: 100%;
   height: 85%;
   border-radius: 1rem;
 }
@@ -191,15 +195,14 @@ header .hamburger-btn {
 }
 
 .generateBtn {
-  width: 30rem;
   height: 7rem;
   background-color: var(--btn-color);
-  padding: 2rem 4rem;
+  padding: 1rem 4rem;
   border-radius: 2rem;
   border: none;
   outline: none;
   font-weight: bold;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #fff;
   -webkit-transition: 300ms ease;
   transition: 300ms ease;
@@ -346,7 +349,7 @@ footer {
 }
 
 footer .social-medias {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 footer .social-medias > a > i {
@@ -362,6 +365,7 @@ footer .social-medias > a > i:hover {
 }
 
 footer .credentials p {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  color: var(--nav-font-color);
 }
 /*# sourceMappingURL=main.css.map */

@@ -10,8 +10,8 @@
 }
 
 .cards-container {
-    width: 150rem;
-    height: 50rem;
+    width: 130rem;
+    height: 40rem;
     background-color: #fff;
     border-radius: 1500rem 750rem 1500rem 750rem;
     align-items: center;
@@ -19,8 +19,8 @@
     margin: 10rem;
 
     .card {
-        width: 25rem;
-        height: 35rem;
+        width: 20rem;
+        height: 30rem;
         background-color: #fff;
         border-radius: 1rem;
         padding: 1rem;
@@ -43,7 +43,7 @@
 
         .card-color{
             background-color: #000;
-            width: 23rem;
+            width: 100%;
             height: 85%;
             border-radius: 1rem;
         }
@@ -67,15 +67,14 @@
 }
 
 .generateBtn {
-    width: 30rem;
     height: 7rem;
     background-color: var(--btn-color);
-    padding: 2rem 4rem;
+    padding: 1rem 4rem;
     border-radius: 2rem;
     border: none;
     outline: none;
     font-weight: bold;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: #fff;
     transition: 300ms ease;
     cursor: pointer;
